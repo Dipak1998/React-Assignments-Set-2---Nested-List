@@ -1,22 +1,24 @@
 import React, { useState } from 'react'
 import Cities from './Cities'
 
-function States({ state, s }) {
+function States(props) {
   const [buttonClicked, setClick] = useState(null)
   return (
     <>
-      <li className={'state' + s}>
+      <li className={'state' + props.s}>
         <button
           onClick={() => {
             setClick(!buttonClicked)
           }}
         >
-          {state.name}
+          {props.state.name}
         </button>
       </li>
       <ul>
         {buttonClicked
-          ? state.cities.map((city, c) => <Cities city={city} c={c + 1} />)
+          ? props.state.cities.map((city, c) => (
+              <Cities city={city} c={c + 1} />
+            ))
           : ''}
       </ul>
     </>

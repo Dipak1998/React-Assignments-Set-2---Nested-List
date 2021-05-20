@@ -1,9 +1,9 @@
 import React from 'react'
 
-function Towns({ town, t }) {
+function Towns(props) {
   return (
     <>
-      <li className={'town' + t}>{town.name}</li>
+      <li className={'town' + props.t}>{props.town.name}</li>
     </>
   )
 }
