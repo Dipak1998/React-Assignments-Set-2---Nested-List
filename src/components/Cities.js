@@ -6,7 +6,7 @@ function Cities(props) {
   return (
     <>
       <li
-        className={'city' + props.c}
+        id={'city' + props.c}
         onClick={() => {
           setClick(!buttonClicked)
         }}

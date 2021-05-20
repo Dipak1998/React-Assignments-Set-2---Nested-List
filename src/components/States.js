@@ -5,7 +5,7 @@ function States(props) {
   const [buttonClicked, setClick] = useState(null)
   return (
     <>
-      <li className={'state' + props.s}>
+      <li id={'state' + props.s}>
         <button
           onClick={() => {
             setClick(!buttonClicked)
