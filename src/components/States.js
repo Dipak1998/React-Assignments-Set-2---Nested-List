@@ -14,13 +14,16 @@ function States(props) {
           {props.state.name}
         </button>
       </li>
-      <ul>
-        {buttonClicked
-          ? props.state.cities.map((city, c) => (
-              <Cities city={city} c={c + 1} />
-            ))
-          : ''}
-      </ul>
+
+      {buttonClicked ? (
+        <ul>
+          {props.state.cities.map((city, c) => (
+            <Cities city={city} c={c + 1} />
+          ))}
+        </ul>
+      ) : (
+        ''
+      )}
     </>
   )
 }
