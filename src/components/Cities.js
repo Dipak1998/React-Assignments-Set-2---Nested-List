@@ -5,13 +5,14 @@ function Cities(props) {
   const [buttonClicked, setClick] = useState(null)
   return (
     <>
-      <li
-        id={'city' + props.c}
-        onClick={() => {
-          setClick(!buttonClicked)
-        }}
-      >
-        <button>{props.city.name}</button>
+      <li id={'city' + props.c}>
+        <button
+          onClick={() => {
+            setClick(!buttonClicked)
+          }}
+        >
+          {props.city.name}
+        </button>
       </li>
       <ul>
         {buttonClicked
