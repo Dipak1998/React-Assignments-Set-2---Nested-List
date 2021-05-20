@@ -161,8 +161,8 @@ function App() {
   return (
     <div id='main'>
       <ul>
-        {states.map((state, s = 0) => (
-          <States state={state} s={s} />
+        {states.map((state, s) => (
+          <States state={state} s={s + 1} />
         ))}
       </ul>
     </div>

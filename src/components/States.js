@@ -16,7 +16,7 @@ function States({ state, s }) {
       </li>
       <ul>
         {buttonClicked
-          ? state.cities.map((city, c) => <Cities city={city} c={c} />)
+          ? state.cities.map((city, c) => <Cities city={city} c={c + 1} />)
           : ''}
       </ul>
     </>

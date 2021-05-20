@@ -15,7 +15,7 @@ function Cities({ city, c }) {
       </li>
       <ul>
         {buttonClicked
-          ? city.towns.map((town, t) => <Towns town={town} t={t} />)
+          ? city.towns.map((town, t) => <Towns town={town} t={t + 1} />)
           : ''}
       </ul>
     </>
