@@ -18,7 +18,7 @@ function Cities(props) {
       {buttonClicked ? (
         <ul>
           {props.city.towns.map((town, t) => (
-            <Towns town={town} t={t + 1} />
+            <Towns town={town} t={t + 1} key={t + 1} />
           ))}
         </ul>
       ) : (

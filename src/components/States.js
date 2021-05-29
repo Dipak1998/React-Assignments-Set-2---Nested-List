@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Cities from './Cities'
 
 function States(props) {
-  const [buttonClicked, setClick] = useState(null)
+  const [buttonClicked, setClick] = useState(false)
   return (
     <>
       <li id={'state' + props.s}>
@@ -18,7 +18,7 @@ function States(props) {
       {buttonClicked ? (
         <ul>
           {props.state.cities.map((city, c) => (
-            <Cities city={city} c={c + 1} />
+            <Cities city={city} c={c + 1} key={c + 1} />
           ))}
         </ul>
       ) : (

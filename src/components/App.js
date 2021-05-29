@@ -162,7 +162,7 @@ function App() {
     <div id='main'>
       <ul>
         {states.map((state, s) => (
-          <States state={state} s={s + 1} />
+          <States state={state} s={s + 1} key={s + 1} />
         ))}
       </ul>
     </div>
