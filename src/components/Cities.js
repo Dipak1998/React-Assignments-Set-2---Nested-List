@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Towns from './Towns'
 
 function Cities(props) {
-  const [buttonClicked, setClick] = useState(null)
+  const [buttonClicked, setClick] = useState(false)
   return (
     <>
       <li id={'city' + props.c}>
